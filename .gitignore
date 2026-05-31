@@ -1,0 +1,13 @@
+credentials.json
+*.json.bak
+
+logs/
+target/
+
+.dbt/
+
+pycache /
+*.pyc
+
+venv/
+.env

@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: zenith_raw
+    database: zenith-capital-498002
+    schema: zenith_raw
+
+    tables:
+      - name: raw_equity_prices
+      - name: raw_macro_indicators
