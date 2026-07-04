@@ -4,7 +4,31 @@ sources:
   - name: zenith_raw
     database: zenith-capital-498002
     schema: zenith_raw
-
     tables:
       - name: raw_equity_prices
       - name: raw_macro_indicators
+
+models:
+  - name: stg_equity_prices
+    columns:
+      - name: symbol
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: close
+        tests:
+          - not_null
+
+  - name: stg_macro_indicators
+    columns:
+      - name: indicator_name
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: value
+        tests:
+          - not_null
