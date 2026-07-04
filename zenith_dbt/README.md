@@ -1,15 +1,21 @@
-Welcome to your new dbt project!
+# Zenith dbt Project
 
-### Using the starter project
+This dbt project transforms raw market and macroeconomic data loaded into BigQuery into analytics-ready models for downstream Power BI reporting.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Model Layers
 
+- `staging`: direct views over raw BigQuery tables.
+- `intermediate`: reusable calculations such as equity returns and macro trend signals.
+- `marts`: business-facing summary tables for executive reporting.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [chat](https://community.getdbt.com/) on Slack for live discussions and support
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+## Commands
+
+```bash
+dbt run
+dbt test
+```
+
+## Expected Sources
+
+- `zenith_raw.raw_equity_prices`
+- `zenith_raw.raw_macro_indicators`
