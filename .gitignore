@@ -3,11 +3,15 @@ credentials.json
 
 logs/
 target/
+zenith_dbt/logs/
+zenith_dbt/target/
 
 .dbt/
 
-pycache /
+__pycache__/
 *.pyc
 
 venv/
 .env
+.env.*
+!.env.example
